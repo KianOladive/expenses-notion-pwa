@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Notion Viewer</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Notion">
+  <meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#191919" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <h1 id="title">Notion</h1>
+      <button id="refresh" aria-label="Refresh">↻</button>
+    </div>
+    <p id="summary"></p>
+    <input id="search" type="search" placeholder="Search" autocomplete="off">
+    <p id="status"></p>
+  </header>
+
+  <main id="list"></main>
+
+  <form id="key-form" hidden>
+    <h2>Access key</h2>
+    <p>Enter the APP_KEY you set on the server. It's stored on this phone only.</p>
+    <input id="key-input" type="password" autocomplete="off" required>
+    <button type="submit">Save</button>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>
